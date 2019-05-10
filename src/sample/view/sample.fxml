@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openSave" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#newSave" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#exportFile" text="Export" />
+                  <MenuItem mnemonicParsing="false" onAction="#importFile" text="Import" />
+                        <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#quitProgram" text="Quit" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <TitledPane layoutY="14.0" prefHeight="206.0" prefWidth="209.0" text="To do ">
+                    <content>
+                        <ListView fx:id="ToDoList" editable="true" prefHeight="200.0" prefWidth="200.0">
+                     </ListView>
+                    </content></TitledPane>
+                <TitledPane layoutX="431.0" layoutY="14.0" prefHeight="206.0" prefWidth="209.0" text="Done">
+               <content>
+                  <ListView fx:id="doneList" prefHeight="173.0" prefWidth="207.0" />
+               </content></TitledPane>
+                <ButtonBar layoutX="218.0" layoutY="281.0" prefHeight="40.0" prefWidth="202.0">
+                    <buttons>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#addTask" prefHeight="25.0" prefWidth="199.0" text="Add Task">
+                     <font>
+                        <Font name="Courier New" size="16.0" />
+                     </font></Button>
+                    </buttons>
+                </ButtonBar>
+            <TitledPane layoutX="219.0" layoutY="14.0" prefHeight="206.0" prefWidth="200.0" text="In Progress">
+               <content>
+                  <ListView fx:id="inProgressList" prefHeight="181.0" prefWidth="198.0" />
+               </content>
+            </TitledPane>
+            <Label layoutX="403.0" layoutY="355.0" prefHeight="12.0" prefWidth="223.0" text="Kaban Table app by Norbert Wójtowicz" textFill="#a1a0a0">
+               <font>
+                  <Font name="Courier New" size="10.0" />
+               </font>
+            </Label>
+            <Separator layoutY="264.0" prefHeight="3.0" prefWidth="640.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="264.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
